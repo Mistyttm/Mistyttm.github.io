@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>MIYH - Rules - Subtraction</title>
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap');
+			@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+		</style>
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+		<link rel="manifest" href="favicon_io/site.webmanifest">
+	</head>
+	<body>
+		<div id="top-bar">
+			<div id="mySidepanel" class="sidepanel">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="index.html">Home</a>
+				<a href="about.html">About</a>
+				<a href="highscores.html">HighScores</a>
+				<button class="dropdown-btn">Games<i class="fa fa-caret-down" style="font-size:25px;color:white;"></i></button>
+				<div class="dropdown-container">
+					<a href="rulesAdd.html">Addition</a>
+					<a href="rulesSub.html">Subtraction</a>
+					<a href="rulesMult.html">Multiplication</a>
+					<a href="rulesDiv.html">Division</a>
+				</div>
+				
+			</div>
+			<div class="hamMenu" onClick="openNav()">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+		</div>
+		<div id="header">
+			<div class="first header">
+				<h1 onclick="">Maths In Your Head - <Subtraction></Subtraction></h1>
+			</div>
+		</div>
+		<div id="mainBody">
+			<div class="box">
+				<h2>ONO! The Dargno of the deep has stolen your royalty figure!!!<br></h2>
+				<p><hr>You must solve maths to save them!<br><br></p>
+				<p>But unfortunately to you, there is no technology or internet in these <br><br>
+					lands!?!<br><br>
+					You must answer all 5 questions correctly to destroy the dargno of <br><br>
+					the deep and save your royalty figure!<br><br>
+					And remember, literally an entire population of people are counting <br><br>
+					on you so don't screw this up.</p>
+				<div class="game">
+					<button class="button button1" onclick="fnPlaySE()"> EASY </button>
+				</div>
+				<div class="game">
+					<button class="button button1" onclick="fnPlaySM()"> MEDIUM </button>
+				</div>
+				<div class="game">
+					<button class="button button1" onclick="fnPlaySH()"> HARD </button>
+				</div>
+			</div>
+		</div>
+		<div class="imgthing">
+			<img src="images/dargno.png" alt="Dargno the Dragon" width="200" height="200">
+		</div>
+	 <script>
+			var dropdown = document.getElementsByClassName("dropdown-btn");
+			var i;
+
+			for (i = 0; i < dropdown.length; i++) {
+			  dropdown[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var dropdownContent = this.nextElementSibling;
+				if (dropdownContent.style.display === "block") {
+				  dropdownContent.style.display = "none";
+				} else {
+				  dropdownContent.style.display = "block";
+				}
+			  });
+			}
+		</script>
+	</body>
+</html>

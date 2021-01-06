@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'crewniversemedium';
+    src: url('crewniverse_font.-webfont.woff2') format('woff2'),
+         url('crewniverse_font.-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bar {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+/* The sidepanel menu */
+.sidepanel {
+  height: 1000px;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2D7E71;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* The sidepanel links */
+.sidepanel a, .dropdown-btn {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: #41B3A3;
+  padding-left: 8px;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8 px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover, .dropdown-btn:hover {
+  color: #888888;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+
+h1 {
+	font-family: crewniversemedium;
+	font-size: 48px;
+	text-align: center;
+	color: white;
+}
+
+#top-bar {
+	background-color: #41B3A3;
+	width: auto;
+	overflow: hidden;
+	margin-top: -8px;
+	margin-left: -8px;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  border-radius: 8px;
+}
+
+.button1:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button {
+  background-color: #E27D60;
+    border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  width: 355px;
+  height: 80px;
+  font-size: 30px;
+  font-family: crewniversemedium;
+}
+
+.box, .game {
+	margin: auto;
+	width: 100%;
+	font-family: crewniversemedium;
+	text-align: center;
+}
+
+.imgthing {
+	float: right;
+	width: 200px;
+	padding: 10px;
+}
+
+.hamMenu {
+	width: 45px;
+	cursor: pointer;
+}
+
+.logo {
+	margin-left: 1480px;
+	width: 10px;
+	height: 10px;
+}
+
+.que {
+}
+
+
+.click {
+	cursor: pointer;
+	width: 45px;
+}
+
+#que {
+	margin: auto;
+	width: 50%;
+	font-family: crewniversemedium;
+	font-size: 90px;
+	text-align: center;
+}
+
+#user {
+
+
+	font-family: crewniversemedium;
+	font-size: auto;
+	text-align: center;
+	align-self: auto;
+}
+
+
+#score {
+	margin: auto;
+	width: 50%;
+	font-family: crewniversemedium;
+	font-size: 90px;
+	text-align: center;
+}
+
+body {
+	background-color: #85DCBA
+}
+
+.addGame {
+	width: 101.2%
+}
+
+
+
+#a {
+	margin: auto;
+	width: 50%;
+	font-family: crewniversemedium;
+	font-size: 90px;
+	text-align: center;
+}
+
+

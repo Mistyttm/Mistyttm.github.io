@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>MIYH - Home</title>
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap');
+			@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+		</style>
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+		<link rel="manifest" href="favicon_io/site.webmanifest">
+	</head>
+	<body>
+		<!-- inside the hamburger menu -->
+		<div id="top-bar">
+			<div id="mySidepanel" class="sidepanel">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="index.html">Home</a>
+				<a href="about.html">About</a>
+				<a href="highscores.html">HighScores</a>
+				<button class="dropdown-btn">Games<i class="fa fa-caret-down" style="font-size:25px;color:white;"></i></button>
+				<div class="dropdown-container">
+					<a href="rulesAdd.html">Addition</a>
+					<a href="rulesSub.html">Subtraction</a>
+					<a href="rulesMult.html">Multiplication</a>
+					<a href="rulesDiv.html">Division</a>
+				</div>
+				
+			</div>
+			<!-- Hamburger menu -->
+			<div class="hamMenu" onClick="openNav()">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+				
+			</div>
+		</div>
+		<!-- main items on thwe front of the page -->
+		<div id="header">
+			<div class="first header">
+				<h1>Maths In Your Head</h1>
+			</div>
+		</div>
+		<div id="mainBody">
+			<div class="box">
+				<div class="game">
+					<button class="button button1" onclick="fnAdd()"> ADDITION </button>
+				</div>
+				<div class="game">
+					<button class="button button1" onclick="fnSub()"> SUBTRACTION </button>
+				</div>
+				<br><hr><h1>Our hardest game Modes</h1><hr><br>
+				<div class="game">
+					<button class="button button1" onclick="fnMult()">  MULTIPLICATION </button>
+				</div>
+				<div class="game">
+					<button class="button button1" onclick="fnDiv()"> DIVISION </button>
+				</div>
+			</div>
+		</div>
+		<script>
+			var dropdown = document.getElementsByClassName("dropdown-btn");
+			var i;
+
+			for (i = 0; i < dropdown.length; i++) {
+			  dropdown[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var dropdownContent = this.nextElementSibling;
+				if (dropdownContent.style.display === "block") {
+				  dropdownContent.style.display = "none";
+				} else {
+				  dropdownContent.style.display = "block";
+				}
+			  });
+			}
+		</script>
+		<!-- small clickable dragon -->
+		<div class="imgthing">
+			<a href="dargno.html">
+				<img src="images/dargno.png" alt="Dargno the Dragon" width="200" height="200">
+			</a>
+		</div>
+	</body>
+</html>

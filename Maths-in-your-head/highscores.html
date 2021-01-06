@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>MIYH - Highscores</title>
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap');
+			@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+		</style>
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+		<link rel="manifest" href="favicon_io/site.webmanifest">
+	</head>
+	<body>
+		<div id="top-bar">
+			<div id="mySidepanel" class="sidepanel">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="index.html">Home</a>
+				<a href="about.html">About</a>
+				<a href="highscores.html">HighScores</a>
+				<button class="dropdown-btn">Games<i class="fa fa-caret-down" style="font-size:25px;color:white;"></i></button>
+				<div class="dropdown-container">
+					<a href="rulesAdd.html">Addition</a>
+					<a href="rulesSub.html">Subtraction</a>
+					<a href="rulesMult.html">Multiplication</a>
+					<a href="rulesDiv.html">Division</a>
+				</div>
+				
+			</div>
+			<div onClick="openNav()" class="click">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+		</div>
+		<div id="header">
+			<div class="first header">
+				<h1>MIYH - Highscores</h1>
+			</div>
+			<div id="mainBody">
+				<div class="box">
+					<p>15 - Subtraction Hard - Johnny Numbers</p>
+					<p>10 - Subtraction Medium - Anonymous Student</p>
+					<p>5 - Subtraction Easy - Silly McSillyface</p>
+					<p>14 - Addition Hard - Too Easy</p>
+					<p>9 - Addition Medium - ABC</p>
+					<p>4 - Addition Easy - flskajfasjdk</p>
+					<p>13 - Multiplication Hard - Johnny Numbers</p>
+					<p>8 - Multiplication Medium - Anonymous Student</p>
+					<p>3 - Multiplication Easy - Silly McSillyface</p>
+					<p>12 - Division Hard - Johnny Numbers</p>
+					<p>7 - Division Medium - Anonymous Student</p>
+					<p>2 - Division Easy - Silly McSillyface</p>
+				</div>
+				<div>
+					<p id="tiny">designed to emulate proper results</p>
+				</div>
+			</div>
+		</div>
+		<script>
+			var dropdown = document.getElementsByClassName("dropdown-btn");
+			var i;
+
+			for (i = 0; i < dropdown.length; i++) {
+			  dropdown[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var dropdownContent = this.nextElementSibling;
+				if (dropdownContent.style.display === "block") {
+				  dropdownContent.style.display = "none";
+				} else {
+				  dropdownContent.style.display = "block";
+				}
+			  });
+			}
+		</script>
+	</body>
+</html>
