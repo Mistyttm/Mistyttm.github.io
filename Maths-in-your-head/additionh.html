@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>MIYH - Addition - Hard</title>
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		<script>
+			function comNumHard() {
+				document.getElementById("que").innerHTML = compOneH + " + " + compTwoH + " = ";
+				answer = compOneH + compTwoH;
+				document.getElementById("score").innerHTML = "Score: " + addScore;
+			}
+
+			//checks whether user input is correct
+			function ansPlusH(){
+				//answer for the problem
+				var input = Number(document.getElementById("user").value);
+				answer = compOneH + compTwoH;
+				if (input == answer) {
+					document.getElementById("a").innerHTML = "You got it right!";
+					comNumHard();
+					addScore++;
+					answered++;
+					correct++;
+					document.getElementById("score").innerHTML = "Score: " + addScore;
+					complete = true;
+				} else {
+					document.getElementById("a").innerHTML = "I'm sorry, but this is wrong";
+					incorrect = true;
+					comNumHard();
+					addScore--;
+					wrong++;
+					answered++;
+					document.getElementById("score").innerHTML = "Score: " + addScore;
+				}
+
+				//resets the question and input
+				if (complete == true || incorrect == true){
+					document.getElementById("user").value = "";
+					compOneH = Math.ceil(Math.random()*100);
+					compTwoH = Math.ceil(Math.random()*100);
+					complete = false;
+					comNumHard();
+				}
+				//detects whether player has won or lost
+				if (answered == 5) {
+					if (wrong > 0){
+						alert("YAY! You defeated the dragon, and only got " + wrong + " wrong!");
+						alert("You got " + correct + "/" + answered + " correct!");					
+					} else {
+						alert("YAY! You defeated the dragon, and you got nothing wrong!");
+						alert("HOORAY!!");
+					}
+					window.location.href = "highscores.html";
+				}
+
+				if (addScore <= -1) {
+					alert("The dragon has taken over the kingdom");
+					window.location.href = "index.html";
+				}
+			}</script>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap');
+			@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+		</style>
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+		<link rel="manifest" href="favicon_io/site.webmanifest">
+	</head>
+	<body onload = "comNumHard()">
+		<div id="top-bar">
+			<div id="mySidepanel" class="sidepanel">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="index.html">Home</a>
+				<a href="about.html">About</a>
+				<a href="highscores.html">HighScores</a>
+				<a href="#">Games</a>
+				
+			</div>
+			<div class="hamMenu" onClick="navError()">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+				
+			</div>
+			
+		</div>
+		<div id="header">
+			<div class="first header">
+				<h1>Addition</h1>
+			</div>
+		</div>
+		<div id="mainBody">
+			<div class="addGame">
+				<p id="que"></p><br><br> <input id="user"> <button type="button" onclick="ansPlusH()" class="button button1">CHECK</button><br><br>
+				<p id="score"></p><br><br><br><p id="a"></p>
+			</div>
+		</div>
+	</body>
+</html>

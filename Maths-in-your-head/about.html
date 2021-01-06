@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>MIYH - About</title>
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap');
+			@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+		</style>
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+		<link rel="manifest" href="favicon_io/site.webmanifest">
+	</head>
+	<body>
+		<div id="top-bar">
+			<div id="mySidepanel" class="sidepanel">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="index.html">Home</a>
+				<a href="about.html">About</a>
+				<a href="highscores.html">HighScores</a>
+				<button class="dropdown-btn">Games<i class="fa fa-caret-down" style="font-size:25px;color:white;"></i></button>
+				<div class="dropdown-container">
+					<a href="rulesAdd.html">Addition</a>
+					<a href="rulesSub.html">Subtraction</a>
+					<a href="rulesMult.html">Multiplication</a>
+					<a href="rulesDiv.html">Division</a>
+				</div>
+				
+			</div>
+			<div class="hamMenu" onClick="openNav()">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+				
+			</div>
+			
+		</div>
+		<div id="header">
+			<div class="first header">
+				<h1>MIYH - ABOUT</h1>
+			</div>
+		</div>
+		<div id="mainBody">
+			<div class="box">
+				<p><i>Maths In Your Head</i> was established in 2004 and has been diligently keeping children, students, and teachers up to date with their mental arithmatic.<br><br> The global use of <i>MIYH</i> has increased significantly as the years have progressed, going from 20 monthlyusers in June 2005, all the way to over 3 million users a month now in May 2020.<br><br> Teachers worldwide have praised <i>MIYH</i> for the last 12 years as we have progressed and made more efficient and useful resources.<br><br> <i>MIYH</i> has been gifted many awards of excellence such as the 2008 global <i>Maths Webapp Awards</i> and the 2013 <i>International Award for Excellence in Maths Tutoring</i>.<br><br> </p>
+			</div>
+		</div>
+		<script>
+			var dropdown = document.getElementsByClassName("dropdown-btn");
+			var i;
+
+			for (i = 0; i < dropdown.length; i++) {
+			  dropdown[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var dropdownContent = this.nextElementSibling;
+				if (dropdownContent.style.display === "block") {
+				  dropdownContent.style.display = "none";
+				} else {
+				  dropdownContent.style.display = "block";
+				}
+			  });
+			}
+		</script>
+	</body>
+</html>
