@@ -1,4 +1,5 @@
 body {
+    min-width:1000px;
     margin: 0;
     overflow: hidden;
     background: linear-gradient(153deg, rgba(171,87,255,1) 33%, rgba(255,248,91,1) 67%);
@@ -7,19 +8,21 @@ body {
 
 .container {
     height: 100vh;
+    min-width: min-content;
 }
 
 .card {
+    min-width:max-content;
     background: rgb(253, 253, 253, 70%);
-    width: 40vw;
-    height: 80vh;
+    width: 50vw;
+    height: 90vh;
     margin: auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10%;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 }
 
 .text {
@@ -29,8 +32,8 @@ body {
 }
 
 .image-cropper {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     position: relative;
     overflow: hidden;
     border-radius: 50%;
@@ -44,14 +47,14 @@ img {
 }
 
 .name {
-    font-size: 2.5em;
+    font-size: 3em;
     display: grid;
     grid-row: 2;
     grid-column: 1;
 }
 
 .pronouns {
-    font-size: 2.5em;
+    font-size: 3em;
     display: grid;
     grid-row: 2;
     grid-column: 2;
@@ -65,16 +68,37 @@ img {
 }
 
 .titles {
-    font-size: 1.5em;
+    font-size: 2em;
     display: grid;
     grid-row: 4;
     grid-column: 1;
 }
 
 .titles-right {
-    font-size: 1.5em;
+    font-size: 2em;
     display: grid;
     grid-row: 4;
     grid-column: 2;
     text-align: right;
+}
+
+.left-content {
+    font-size: 2em;
+    display: grid;
+    grid-row: 5;
+    grid-column: 1;
+}
+
+.right-content {
+    font-size: 2em;
+    display: grid;
+    grid-row: 5;
+    grid-column: 2;
+    text-align: right;
+    list-style-position: inside;
+    direction: rtl;
+}
+
+li {
+    margin-bottom: 1em;
 }
