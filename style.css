@@ -1,11 +1,13 @@
 body {
+    margin: 0;
+    overflow: hidden;
     background: linear-gradient(153deg, rgba(171,87,255,1) 33%, rgba(255,248,91,1) 67%);
     background-repeat: no-repeat;
+    background-size: 100%;
     height: 100%;
     width: 100%;
 }
 
 .container {
-    width: 100%;
-    height: 100%;
+    height: 100vh;
 }
