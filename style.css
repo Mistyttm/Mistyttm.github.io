@@ -8,7 +8,7 @@ body {
 
 .container {
     height: 100vh;
-    min-width: min-content;
+    min-width: 20rem;
 }
 
 .card {
@@ -16,6 +16,7 @@ body {
     background: rgb(253, 253, 253, 70%);
     width: 50vw;
     height: 90vh;
+    min-height: 10rem;
     margin: auto;
     position: absolute;
     top: 50%;
@@ -68,14 +69,14 @@ img {
 }
 
 .titles {
-    font-size: 2em;
+    font-size: 2.2em;
     display: grid;
     grid-row: 4;
     grid-column: 1;
 }
 
 .titles-right {
-    font-size: 2em;
+    font-size: 2.2em;
     display: grid;
     grid-row: 4;
     grid-column: 2;
@@ -85,20 +86,40 @@ img {
 .left-content {
     font-size: 2em;
     display: grid;
-    grid-row: 5;
+    grid-row: 6;
     grid-column: 1;
+}
+
+.lang-title{
+    list-style: none;
+    margin-top: -1em;
+    margin-left: -1.2em;
+}
+
+.study-title{
+    list-style: none;
+    margin-top: -1em;
 }
 
 .right-content {
     font-size: 2em;
     display: grid;
-    grid-row: 5;
+    grid-row: 6;
     grid-column: 2;
     text-align: right;
     list-style-position: inside;
     direction: rtl;
+    margin-right: -1.2em;
 }
 
-li {
+.left-list {
     margin-bottom: 1em;
+}
+
+.right-list {
+    margin-bottom: 1em;
+}
+
+.subcategory {
+    font-size: .8em;
 }
