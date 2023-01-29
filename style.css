@@ -8,16 +8,18 @@ body {
 .container {
     height: 100vh;
     padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 .card {
     background: rgb(253, 253, 253, 70%);
-    width: 50%;
-    height: 90%;
-    margin: auto;
+    width: 50vw;
+    height: 90vh;
     position: absolute;
+    margin: auto;
     top: 50%;
-    left: 50%;
+    left: 50vw;
     transform: translate(-50%, -50%);
     border-radius: 10%;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
@@ -96,6 +98,7 @@ img {
 .study-title{
     list-style: none;
     margin-top: -1em;
+    margin-left: -1.2em;
 }
 
 .right-content {
@@ -103,10 +106,6 @@ img {
     display: grid;
     grid-row: 6;
     grid-column: 2;
-    text-align: right;
-    list-style-position: inside;
-    direction: rtl;
-    margin-right: -1.2em;
 }
 
 .left-list {
